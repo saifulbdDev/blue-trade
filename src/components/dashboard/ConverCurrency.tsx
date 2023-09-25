@@ -29,7 +29,7 @@ export default function ConverCurrency() {
           />
         </svg>
       </div>
-      <div className="bg-[#F9F9FA] dark:bg-[#121212] flex justify-between items-center rounded-md w-[304px]">
+      <div className="bg-[#F9F9FA] dark:bg-[#121212] flex justify-between items-center rounded-md w-full">
         <input
           type="text"
           placeholder="100"
@@ -49,7 +49,7 @@ export default function ConverCurrency() {
           </option>
         </select>
       </div>
-      <div className="bg-[#F9F9FA] dark:bg-[#121212] flex justify-between items-center rounded-md w-[304px]">
+      <div className="bg-[#F9F9FA] dark:bg-[#121212] flex justify-between items-center rounded-md w-full">
         <input
           type="text"
           placeholder="0.0043"
