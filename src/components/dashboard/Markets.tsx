@@ -1,4 +1,4 @@
-export default function Markets() {
+const Markets =  () => {
   return (
     <div className="bg-white dark:bg-[#1C1C25] flex w-1/3 flex-col gap-2 rounded-2xl  p-4">
       <div className="flex items-center gap-2 px-2">
@@ -125,3 +125,4 @@ export default function Markets() {
     </div>
   );
 }
+export default  Markets
