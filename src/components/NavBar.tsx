@@ -1,13 +1,18 @@
 "use client";
+import React from "react";
 import Image from "next/image";
 import { Menu, Transition } from "@headlessui/react";
 import ThemeSwitcher from "./ThemeSwitcher";
 import { Fragment } from "react";
 
-const Navbar = () => {
+type NavbarProps = {
+  onSideBar: () => void;
+};
+
+const Navbar: React.FC<NavbarProps> = ({ onSideBar }) => {
   return (
     <div className="flex justify-between items-center bg-white dark:bg-[#1C1C25]  py-4 px-8">
-      <div className="block md:hidden pr-4">
+      <button className="block  xl:hidden pr-4" onClick={onSideBar}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -21,7 +26,7 @@ const Navbar = () => {
             d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
           />
         </svg>
-      </div>
+      </button>
       {/* Search input */}
       <div className="flex justify-between items-center rounded-full border px-4  w-2/5">
         <input

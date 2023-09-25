@@ -1,8 +1,9 @@
+"use client";
 import "./globals.css";
 import type { Metadata } from "next";
 import Sidebar from "@/components/Sidebar";
-import Topbar from "@/components/NavBar";
-
+import NavBar from "@/components/NavBar";
+import { useState, useEffect } from "react";
 import { Inter } from "next/font/google";
 import Provider from "./Provider";
 
@@ -18,6 +19,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
+  const [isSidebar, setSidebar] = useState(false);
+  const onSideBar = () => {
+    setSidebar(!isSidebar)
+  }
+  useEffect(() => {
+    
+  }, []);
   return (
     <html lang="en">
       <link
@@ -28,9 +37,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <Provider>
           <main className="flex h-screen overflow-hidden bg-light dark:bg-dark">
-            <Sidebar />
+            {!isSidebar ? <Sidebar /> : ""}
             <div className="flex flex-col w-full">
-              <Topbar />
+              <NavBar onSideBar={onSideBar} />
               {children}
             </div>
           </main>
