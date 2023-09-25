@@ -1,6 +1,6 @@
 "use client";
 import "./globals.css";
-import type { Metadata } from "next";
+
 import Sidebar from "@/components/Sidebar";
 import NavBar from "@/components/NavBar";
 import { useState, useEffect } from "react";
@@ -9,10 +9,6 @@ import Provider from "./Provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Blue Trade",
-  description: "Crypto Dashboard"
-};
 
 export default function RootLayout({
   children
