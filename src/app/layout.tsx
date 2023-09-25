@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Blue Trade",
-  description: "Crypto Dashboard with next.js"
+  description: "Crypto Dashboard"
 };
 
 export default function RootLayout({
