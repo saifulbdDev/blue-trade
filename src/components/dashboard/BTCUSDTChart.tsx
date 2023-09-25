@@ -4,16 +4,16 @@ import React from "react";
 import dynamic from "next/dynamic";
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
-interface CandleStickData {
+interface BTCUSDTData {
   x: Date;
   y: [number, number, number, number];
 }
 
-interface CandleStickSeries {
-  data: CandleStickData[];
+interface BTCUSDTSeries {
+  data: BTCUSDTData[];
 }
 
-interface CandleStickOptions {
+interface BTCUSDTOptions {
   chart: {
     type: string;
     height: number;
@@ -33,8 +33,8 @@ interface CandleStickOptions {
 }
 
 const data: {
-  series: CandleStickSeries[];
-  options: CandleStickOptions;
+  series: BTCUSDTSeries[];
+  options: BTCUSDTOptions;
 } = {
   series: [
     {
@@ -208,8 +208,8 @@ const data: {
   },
 };
 
-function CandleStickChart() {
-  // Cast CandleStickOptions to ApexOptions
+function BTCUSDTChart() {
+  // Cast BTCUSDTOptions to ApexOptions
   const apexOptions = data.options as ApexOptions;
 
   return (
@@ -224,4 +224,4 @@ function CandleStickChart() {
   );
 }
 
-export default CandleStickChart;
+export default BTCUSDTChart;

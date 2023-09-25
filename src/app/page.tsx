@@ -1,18 +1,17 @@
-import Image from "next/image";
 import React from "react";
 import ConverCurrency from "@/components/dashboard/ConverCurrency";
 import History from "@/components/dashboard/History";
 import Markets from "@/components/dashboard/Markets";
 import Assets from "@/components/dashboard/Assets";
-import Chart1 from "@/components/dashboard/Chart1";
+import Chart1 from "@/components/dashboard/Chart";
 
 export default function Home() {
   return (
-    <div className="overflow-scroll w-full">
+    <div className="max-w-7xl w-full  mx-auto">
       {/* Top card */}
-      <div className="flex gap-6 p-6">
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-6 p-6">
         {/* Report card 1 */}
-        <div className="bg-white dark:bg-[#1C1C25] flex flex-col gap-4 p-4 rounded-xl w-[302px]">
+        <div className="bg-white dark:bg-[#1C1C25] flex flex-col gap-4 p-4 rounded-xl">
           {/* card top */}
           <div className="flex justify-between items-center gap-2">
             <div className="bg-[#2F80ED33] flex justify-center items-center w-11 h-11 rounded-lg">
@@ -69,7 +68,7 @@ export default function Home() {
         </div>
 
         {/* Report card 2 */}
-        <div className="bg-white dark:bg-[#1C1C25] flex flex-col gap-4 p-4 rounded-xl w-[325px]">
+        <div className="bg-white dark:bg-[#1C1C25] flex flex-col gap-4 p-4 rounded-xl">
           {/* card top */}
           <div className="flex items-center gap-3">
             <div className="bg-[#FF9C0733] flex justify-center items-center w-11 h-11 rounded-lg">
@@ -116,7 +115,7 @@ export default function Home() {
           </div>
         </div>
         {/* Card 3 */}
-        <div className="bg-white dark:bg-[#1C1C25] flex flex-col gap-4 p-4 rounded-xl w-[325px]">
+        <div className="bg-white dark:bg-[#1C1C25] flex flex-col gap-4 p-4 rounded-xl">
           {/* card top */}
           <div className="flex items-center gap-3">
             <div className="bg-[#4D21FF33] flex justify-center items-center w-11 h-11 rounded-lg">
@@ -167,7 +166,7 @@ export default function Home() {
         </div>
 
         {/* Card 4 */}
-        <div className="bg-white dark:bg-[#1C1C25] flex flex-col gap-4 p-4 rounded-xl w-[325px]">
+        <div className="bg-white dark:bg-[#1C1C25] flex flex-col gap-4 p-4 rounded-xl">
           {/* card top */}
           <div className="flex items-center gap-3">
             <div className="bg-[#4D21FF33] flex justify-center items-center w-11 h-11 rounded-lg">
@@ -221,7 +220,7 @@ export default function Home() {
       </div>
 
       {/* row 2 */}
-      <div className="flex gap-6 px-6">
+      <div className="flex gap-6 px-6 ">
         {/* Chart 1 */}
         <Chart1 />
 
@@ -230,7 +229,7 @@ export default function Home() {
       </div>
 
       {/* row 3 */}
-      <div className="flex gap-6 p-6">
+      <div className="grid grid-cols-11 gap-6 p-6">
         {/* Assets */}
         <Assets />
 

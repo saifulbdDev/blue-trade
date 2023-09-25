@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ConverCurrency() {
   return (
-    <div className="bg-white dark:bg-[#1C1C25] flex flex-col gap-4 rounded-[15px] w-[366px] p-8">
+    <div className="bg-white dark:bg-[#1C1C25] flex flex-col gap-4 rounded-[15px] lg:col-span-3 p-8">
       <div className="flex justify-between items-center gap-4">
         <h1 className="text-xl font-semibold">Convert </h1>
         <svg

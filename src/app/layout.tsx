@@ -11,21 +11,24 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Blue Trade",
-  description: "Crypto Dashboard with next.js",
+  description: "Crypto Dashboard with next.js"
 };
 
 export default function RootLayout({
-  children,
+  children
 }: {
   children: React.ReactNode;
 }) {
-
-  const [isSidebar, setSidebar] = useState(false);
+  const [isSidebar, setSidebar] = useState(true);
+  const [isMobile, setMobile] = useState(false);
   const onSideBar = () => {
-    setSidebar(!isSidebar)
-  }
+    setSidebar(!isSidebar);
+  };
   useEffect(() => {
-    
+    if (window.innerWidth < 1280) {
+      setSidebar(false);
+      setMobile(true);
+    } else setMobile(false);
   }, []);
   return (
     <html lang="en">
@@ -36,8 +39,8 @@ export default function RootLayout({
       />
       <body className={inter.className}>
         <Provider>
-          <main className="flex h-screen overflow-hidden bg-light dark:bg-dark">
-            {!isSidebar ? <Sidebar /> : ""}
+          <main className="flex  bg-light dark:bg-dark">
+            {isSidebar ? <Sidebar isMobile={isMobile} /> : ""}
             <div className="flex flex-col w-full">
               <NavBar onSideBar={onSideBar} />
               {children}
