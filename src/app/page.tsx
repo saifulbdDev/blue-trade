@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="max-w-7xl w-full  mx-auto">
       {/* Top card */}
-      <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-6 p-6">
+      <div className="grid mb-5 lg:grid-cols-4 md:grid-cols-2 gap-6">
         {/* Report card 1 */}
         <div className="bg-white dark:bg-[#1C1C25] flex flex-col gap-4 p-4 rounded-xl">
           {/* card top */}
@@ -220,7 +220,7 @@ export default function Home() {
       </div>
 
       {/* row 2 */}
-      <div className="flex gap-6 px-6 ">
+      <div className="md:flex gap-6 mb-5 ">
         {/* Chart 1 */}
         <Chart1 />
 
@@ -229,7 +229,7 @@ export default function Home() {
       </div>
 
       {/* row 3 */}
-      <div className="grid grid-cols-11 gap-6 p-6">
+      <div className="md:grid grid-8 xl:grid-cols-11 gap-6 ">
         {/* Assets */}
         <Assets />
 

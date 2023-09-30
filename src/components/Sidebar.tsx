@@ -5,10 +5,7 @@ import { useTheme } from "next-themes";
 const Sidebar = ({ isMobile = false }) => {
   const { theme } = useTheme();
   return (
-    <div
-      className={`${
-        isMobile ? "fixed left-0 z-[2000]" : ""
-      } flex flex-col  items-center min-h-screen bg-white dark:bg-[#1C1C25] dark:text-white w-[307px] border-r-2 dark:border-0 border-[#C0C5CB5E]`}>
+    <div className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col border-r ">
       {/* sidebar logo */}
       <div className="flex xl:p-10 md:p-5">
         <svg

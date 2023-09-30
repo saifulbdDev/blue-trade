@@ -11,7 +11,7 @@ type NavbarProps = {
 
 const Navbar: React.FC<NavbarProps> = ({ onSideBar }) => {
   return (
-    <div className="flex justify-between items-center bg-white dark:bg-[#1C1C25]  py-4 px-8">
+    <div className="flex sticky top-0 z-40 h-[98px] justify-between items-center bg-white dark:bg-[#1C1C25]  py-4 px-8">
       <button className="block  xl:hidden pr-4" onClick={onSideBar}>
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -1,7 +1,7 @@
 const Markets =  () => {
   return (
-    <div className="bg-white dark:bg-[#1C1C25] flex w-1/3 flex-col gap-2 rounded-2xl  p-4">
-      <div className="flex items-center gap-2 px-2">
+    <div className="bg-white dark:bg-[#1C1C25]  md:w-2/5  rounded-2xl  p-4">
+      <div className="flex items-center ">
         <h1 className="text-xl font-semibold">Markets</h1>
         <div className="flex gap-2">
           <a
@@ -31,7 +31,7 @@ const Markets =  () => {
           </a>
         </div>
       </div>
-      <table className="mt-2 w-full px-4">
+      <table className="mt-2 w-full px-4 table-auto">
         <tr className="border-b border-gray-100">
           <td className="px-2 py-3 text-xs font-semibold">BTCUSDT</td>
           <td className="px-2 py-3 text-[#5E6E78] text-xs font-semibold">

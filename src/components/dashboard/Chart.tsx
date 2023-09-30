@@ -5,8 +5,8 @@ import BTCUSDTChart from "./BTCUSDTChart";
 
 export default function Chart() {
   return (
-    <div className="bg-white dark:bg-[#1C1C25] flex flex-col w-2/3 rounded-[15px]  p-8">
-      <div className="flex justify-between items-start">
+    <div className="bg-white dark:bg-[#1C1C25] flex flex-col  md:w-3/5 rounded-[15px]  p-4">
+      <div className="sm:flex justify-between items-start">
         <div className="flex justify-between w-1/3">
           <div className="flex flex-col">
             <h1 className="text-xl font-bold">BTCUSDT</h1>
